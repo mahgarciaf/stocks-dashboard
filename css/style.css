@@ -13,10 +13,6 @@ body {
     height: 60px;
     background: #373737;
     align-items: center;
-    display: flex;
-    /* gap -> uma das propriedades do display flex */
-    gap: 15px; /* é a margem entre os elementos dentro do display: flex */
-    padding: 0 20px;
 }
 #main-header h1 {
     margin: 0;
@@ -25,6 +21,55 @@ body {
     width: 40px;
     height: 40px;
 }
-/* .wrapper {
-    vai centralizar 
-} */
+#main-header .wrapper {
+    display: flex;
+    height: 60px;
+    /* gap -> uma das propriedades do display flex */
+    gap: 15px; /* é a margem entre os elementos dentro do display: flex */
+    padding: 0 20px;
+    align-items: center;
+}
+#main-header span {
+    color: #ff8308;
+}
+#main-header button {
+    margin: 0;
+    margin-left: auto;
+    background: none;
+    border: 2px solid #ff8308;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    color: #ff8308;
+}
+#main-header button:hover {
+    cursor: pointer;
+}
+.wrapper {
+    /* vai centralizar o conteúdo da sua div  */
+    width: 900px;
+    margin: 0 auto;
+}
+.modal {
+    /* div que ocupe a tela inteira */
+    position: absolute; /* vai ter posição absoluta em relação à sua div pai, nesse caso ele vai ter posição absoluta em relação a tela inteira do navegador */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* canal alfa -> 6 dígitos + 2 dígitos (indicam a transparência) */
+    background: #00000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content {
+    width: 400px;
+    min-width: 300px;
+    min-height: 200px;
+    background: #373737;
+    border-radius: 20px;
+    padding: 20px;
+}
+.modal .modal-content h1{
+    margin: 0;
+}
