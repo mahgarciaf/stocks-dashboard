@@ -58,7 +58,8 @@ body {
     left: 0;
     /* canal alfa -> 6 dígitos + 2 dígitos (indicam a transparência) */
     background: #00000080;
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -69,7 +70,21 @@ body {
     background: #373737;
     border-radius: 20px;
     padding: 20px;
+    position: relative;
 }
 .modal .modal-content h1{
     margin: 0;
+}
+#add-stock button {
+    background: none;
+    font-size: 1.4rem;
+    color: #FFF;
+    border-style: hidden;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    padding: 10px 16px;
+}
+#add-stock button:hover {
+    cursor: pointer;
 }

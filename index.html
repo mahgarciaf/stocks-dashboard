@@ -13,15 +13,24 @@
             <!-- wraper é o pacote -->
             <img src="img/stock-earnings-svgrepo-com.svg" alt="Logo Stocks Dashboard">
             <h1>Stocks <span>Dashboard</span></h1> 
-            <button>+</button>
+            <button onclick="openModal('#add-stock')">+</button>
         </div> 
     </header>
-    <div class="modal">
+    <!-- <div class="modal" id="add-stock" onclick="closeModal(event)"> -->
+    <div class="modal" id="add-stock">
         <div class="modal-content">
             <!-- conteúdo do modal -->
             <h1>Add Stock</h1>
+            <!-- <button class="btn-close" onclick="closeModal(null, '#add-stock')">x</button> -->
+            <button class="btn-close" onclick="closeModal('#add-stock')">x</button>
         </div>
     </div>
-     
+    <div class="modal">
+        <div class="modal-content">
+            <!-- conteúdo do modal -->
+            <h1>Outro modal</h1>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
