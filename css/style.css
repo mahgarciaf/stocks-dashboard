@@ -64,9 +64,9 @@ body {
     align-items: center;
 }
 .modal .modal-content {
-    width: 400px;
-    min-width: 300px;
-    min-height: 200px;
+    width: 373px;
+    min-width: 285px;
+    min-height: 99px;
     background: #373737;
     border-radius: 20px;
     padding: 20px;
@@ -87,4 +87,23 @@ body {
 }
 #add-stock button:hover {
     cursor: pointer;
+}
+#tickers-list{
+    display: flex;
+    /* gap -> espaço entre os tickers */
+    gap: 30px;
+    padding: 20px;
+}
+
+#tickers-list .ticker {
+    background: #262626;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+}
+
+#tickers-list .ticker h2 {
+    padding: 0;
+    margin: 0;
 }
