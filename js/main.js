@@ -64,11 +64,14 @@ const handleAddTicker = async (event) => {
     // ou função asincrona (a função pode demorar) -> usar o await para aguardar a resposta
     // 8QC7B105TIB1TM93
     try {
-        const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=yyyyyyyyyyy`)
+        const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=8QC7B105TIB1TM93`)
         const data = await response.json()
         //console.log(data)
-        const price = data["Global Quote"]["05. price"]
-        const previousClosePrice = data["Global Quote"]["previous close"] // informação retirada no console
+        //const price = data["Global Quote"]["05. price"]
+        //const previousClosePrice = data["Global Quote"]["previous close"] // informação retirada no console
+
+        const price = 89.6
+        const previousClosePrice = 120.0
 
         if(price && previousClosePrice){
             // alert('Deu certo!')
@@ -83,10 +86,10 @@ const handleAddTicker = async (event) => {
                 if(priceFormatted > previousClosePrice){
                     // se o valor atual for maior do que a previsão, ele ficará verde
                     priceChange = 'increase'
-                    symbol = '+'
+                    symbol = '▲'
                 } else{
                     priceChange = 'decrease'
-                    symbol = '-'
+                    symbol = '▼'
                 }
             }
 
@@ -101,6 +104,8 @@ const handleAddTicker = async (event) => {
             const tickersList = document.querySelector("#tickers-list")
             // tickersList.innerHTML += newTicker
             tickersList.innerHTML = newTicker + tickersList.innerHTML // dessa forma os mais antigos vão para o final
+            // é dessa forma que os tickers são adicionados na tela
+            addTickersCloseEvents()
             closeModal("#add-stock")
         } else{
             alert(`Ticker ${ticker} não encontrado!`)
