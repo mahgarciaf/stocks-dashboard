@@ -75,7 +75,8 @@ body {
 .modal .modal-content h1{
     margin: 0;
 }
-#add-stock button {
+.modal .modal-content button.btn-close,
+#tickers-list .ticker button.btn-close {
     background: none;
     font-size: 1.4rem;
     color: #FFF;
@@ -101,9 +102,29 @@ body {
     border-radius: 15px;
     width: 100px;
     text-align: center;
+    position: relative;
 }
 
 #tickers-list .ticker h2 {
     padding: 0;
     margin: 0;
+}
+
+#tickers-list .ticker button.btn-close {
+    padding: 0px 5px;
+    font-size: 1rem;
+    display: none;
+}
+
+#tickers-list .ticker button.btn-close:hover {
+    cursor: pointer;
+}
+
+/* increase nesse caso é uma classe do p */
+.ticker p.increase {
+    color: green;
+}
+
+.ticker p.decrease {
+    color: rgba(255, 0, 0, 0.74);
 }
